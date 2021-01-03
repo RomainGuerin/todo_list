@@ -62,7 +62,6 @@
         <div class="textetop">
             <h2>To-Do List</h2>
             <form method="POST" type="POST" action="index.php">
-                <!-- Texte inférieur à 50 caractères -->
                 <input id="NewTache" class="form-control" placeholder="Tâche à faire..." name="tache" type="text" required> 
                 <button type="submit" name="ajouter">Ajouter</button>
             </form>
