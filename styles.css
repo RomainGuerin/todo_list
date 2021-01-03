@@ -1,0 +1,162 @@
+*{
+    box-sizing: border-box;
+}
+
+.header{
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .3);
+    border-top: 5px solid #414141;
+    border-radius: 10px;
+    background: linear-gradient(to top, #d08282 10%, #a0adcf 80%);
+    font-family: cursive;
+}
+
+.textetop{
+    padding: 20px 20px;
+    text-align: center;
+}
+
+input{
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0;
+    background-color: azure;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: cursive;
+}
+
+/* N'affiche pas de contour lorsqu'on clic */
+input:focus{
+    outline: none;
+}
+
+button{
+    color: #414141;
+    background-color: azure;
+    padding: 0.25rem 1.75rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+button:hover{
+    color: #cccccc;
+    background-color: #414141;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+button:focus{
+    outline:none;
+}
+
+
+.tab{
+    width: 75%;
+    border-color: white;
+    border-style: dashed;
+}
+
+
+.textebottom{
+    padding: 20px 10px;
+}
+
+.anime-bas{
+    position: relative;
+    animation-name: animebas;
+    animation-duration: 1s;
+}
+    
+@keyframes animebas{ 
+    from{ bottom:-10px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul li{
+    user-select: none;
+    position: relative;
+    padding: 10px 35px 10px 35px;
+    font-size: 0.95rem;
+    transition: 0.4s;
+}
+
+/* Permet de mettre un arrière-plan d'une couleur différente chaque 2 listes */
+ul li:nth-child(odd){
+    background: #f9f9f91e;
+}
+
+ul li:hover{
+    background: #ddd;
+}
+
+ul li.fini{
+    background: mediumseagreen;
+    color: #fff;
+}
+
+ul li.fini:nth-child(odd){
+    background: seagreen;
+    color: #fff;
+}
+
+/* Rajoute l'icône check si la classe .fini est attribuée */
+ul li.fini::before{
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 13px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+.btn_fini{
+    color: black;
+    position: absolute;
+    text-decoration: none;
+    top: 0;
+    left: 0;
+    padding: 10px 9px 10px 9px;
+    transition: 0.4s;
+}
+
+li.fini .btn_fini{
+    display: none;
+}
+
+.btn_fini:hover{
+    background-color: green;
+    color: white;
+    text-decoration: none;
+}
+
+.fermer{
+    color: black;
+    position: absolute;
+    text-decoration: none;
+    right: 0;
+    top: 0;
+    padding: 10px 13px 10px 13px;
+    transition: 0.4s;
+}
+  
+.fermer:hover{
+    background-color: red;
+    color: white;
+    text-decoration: none;
+}
